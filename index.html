@@ -1,0 +1,702 @@
+<!-- 
+Online HTML, CSS and JavaScript editor to run code online.
+-->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Questionnaire: Bases de SPSS et Types de Variables</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f7f7f7;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px #ccc;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        fieldset {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        legend {
+            font-weight: bold;
+            color: #555;
+        }
+
+        label {
+            margin-left: 10px;
+            line-height: 1.6;
+            display: block;
+        }
+
+        button {
+            background-color: #5C85D6;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #3a5ba0;
+        }
+
+        #result {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #e1f5fe;
+            border: 1px solid #b3e5fc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form id="quizForm">
+            <h1>Questionnaire: Bases de SPSS et Types de Variables</h1>
+
+            <!-- Question 1 -->
+            <fieldset>
+                <legend>1. Quel type de variable SPSS utilise-t-il pour représenter des variables qualitatives? (Choix unique)</legend>
+                <label><input type="radio" name="q1" value="A"> A. Scale</label>
+                <label><input type="radio" name="q1" value="B"> B. Ordinal</label>
+                <label><input type="radio" name="q1" value="C"> C. Nominal</label>
+                <label><input type="radio" name="q1" value="D"> D. String</label>
+            </fieldset>
+
+            <!-- Question 2 -->
+            <fieldset>
+                <legend>2. Quelles sont les étapes de base pour entrer des données dans SPSS? (Choix multiples)</legend>
+                <label><input type="checkbox" name="q2" value="A"> A. Définir les variables</label>
+                <label><input type="checkbox" name="q2" value="B"> B. Entrer les données</label>
+                <label><input type="checkbox" name="q2" value="C"> C. Sélectionner une analyse</label>
+                <label><input type="checkbox" name="q2" value="D"> D. Enregistrer le fichier</label>
+            </fieldset>
+
+            <!-- Question 3 -->
+            <fieldset>
+                <legend>3. Dans SPSS, comment accède-t-on à la fenêtre de recodage des variables? (Choix unique)</legend>
+                <label><input type="radio" name="q3" value="A"> A. Transform > Recode into Same Variables</label>
+                <label><input type="radio" name="q3" value="B"> B. Data > Recode > Into Different Variables</label>
+                <label><input type="radio" name="q3" value="C"> C. Analyze > Recode > Into Same Variables</label>
+                <label><input type="radio" name="q3" value="D"> D. Transform > Recode > Into Different Variables</label>
+            </fieldset>
+
+            <!-- Question 4 -->
+            <fieldset>
+                <legend>4. Quelle fonction de SPSS permet de calculer des statistiques descriptives pour une variable continue? (Choix unique)</legend>
+                <label><input type="radio" name="q4" value="A"> A. Frequencies</label>
+                <label><input type="radio" name="q4" value="B"> B. Descriptives</label>
+                <label><input type="radio" name="q4" value="C"> C. Crosstabs</label>
+                <label><input type="radio" name="q4" value="D"> D. Correlate</label>
+            </fieldset>
+
+            <!-- Question 5 -->
+            <fieldset>
+                <legend>5. Quelles sont les variables nécessaires pour créer un tableau croisé dans SPSS? (Choix multiples)</legend>
+                <label><input type="checkbox" name="q5" value="A"> A. Une variable quantitative</label>
+                <label><input type="checkbox" name="q5" value="B"> B. Une variable qualitative</label>
+                <label><input type="checkbox" name="q5" value="C"> C. Deux variables qualitatives</label>
+                <label><input type="checkbox" name="q5" value="D"> D. Deux variables quantitatives</label>
+            </fieldset>
+
+            <!-- Question 6 -->
+            <fieldset>
+                <legend>6. Pour examiner la relation entre deux variables continues, quel test utiliseriez-vous? (Choix unique)</legend>
+                <label><input type="radio" name="q6" value="A"> A. Chi-square test</label>
+                <label><input type="radio" name="q6" value="B"> B. Pearson correlation</label>
+                <label><input type="radio" name="q6" value="C"> C. ANOVA</label>
+                <label><input type="radio" name="q6" value="D"> D. T-test</label>
+            </fieldset>
+
+            <!-- Question 7 -->
+            <fieldset>
+                <legend>7. Comment accéder à l'analyse de corrélation de Spearman dans SPSS? (Choix unique)</legend>
+                <label><input type="radio" name="q7" value="A"> A. Analyze > Correlate > Bivariate...</label>
+                <label><input type="radio" name="q7" value="B"> B. Analyze > Regression > Linear</label>
+                <label><input type="radio" name="q7" value="C"> C. Graphs > Legacy Dialogs > Scatter/Dot</label>
+                <label><input type="radio" name="q7" value="D"> D. Analyze > Descriptive Statistics > Crosstabs</label>
+            </fieldset>
+
+            <!-- Question 8 -->
+            <fieldset>
+                <legend>8. Quel test est approprié pour étudier la relation entre deux variables qualitatives? (Choix unique)</legend>
+                <label><input type="radio" name="q8" value="A"> A. Chi-square test</label>
+                <label><input type="radio" name="q8" value="B"> B. Pearson correlation</label>
+                <label><input type="radio" name="q8" value="C"> C. Spearman correlation</label>
+                <label><input type="radio" name="q8" value="D"> D. Independent-samples T-test</label>
+            </fieldset>
+
+            <!-- Question 9 -->
+            <fieldset>
+                <legend>9. Dans une étude sur la relation entre le revenu et la consommation, quel type de test de corrélation est le plus approprié? (Choix unique)</legend>
+                <label><input type="radio" name="q9" value="A"> A. Chi-square test</label>
+                <label><input type="radio" name="q9" value="B"> B. Pearson correlation</label>
+                <label><input type="radio" name="q9" value="C"> C. Spearman correlation</label>
+                <label><input type="radio" name="q9" value="D"> D. ANOVA</label>
+            </fieldset>
+
+            <!-- Question 10 -->
+            <fieldset>
+                <legend>10. Pour comparer les revenus entre deux genres, quel outil SPSS est le plus utilisé? (Choix unique)</legend>
+                <label><input type="radio" name="q10" value="A"> A. Independent-samples T-test</label>
+                <label><input type="radio" name="q10" value="B"> B. Paired-samples T-test</label>
+                <label><input type="radio" name="q10" value="C"> C. One-way ANOVA</label>
+                <label><input type="radio" name="q10" value="D"> D. Correlation</label>
+            <!-- Question 11 -->
+            <fieldset>
+                <legend>11. Comment créer un histogramme pour une variable continue dans SPSS? (Choix unique)</legend>
+                <label><input type="radio" name="q11" value="A"> A. Graphs > Chart Builder...</label>
+                <label><input type="radio" name="q11" value="B"> B. Analyze > Descriptive Statistics > Frequencies</label>
+                <label><input type="radio" name="q11" value="C"> C. Analyze > Descriptive Statistics > Descriptives</label>
+                <label><input type="radio" name="q11" value="D"> D. Graphs > Legacy Dialogs > Histogram...</label>
+            </fieldset>
+
+            <!-- Question 12 -->
+            <fieldset>
+                <legend>12. Quelle option permet de générer un diagramme de dispersion pour examiner la relation entre deux variables continues? (Choix unique)</legend>
+                <label><input type="radio" name="q12" value="A"> A. Graphs > Legacy Dialogs > Scatter/Dot...</label>
+                <label><input type="radio" name="q12" value="B"> B. Analyze > Correlate > Bivariate</label>
+                <label><input type="radio" name="q12" value="C"> C. Analyze > Regression > Linear</label>
+                <label><input type="radio" name="q12" value="D"> D. Graphs > Chart Builder...</label>
+            </fieldset>
+
+            <!-- Question 13 -->
+            <fieldset>
+                <legend>13. Pour visualiser la relation entre le revenu et la consommation par genre, quel type de graphique est adapté? (Choix multiples)</legend>
+                <label><input type="checkbox" name="q13" value="A"> A. Histogramme</label>
+                <label><input type="checkbox" name="q13" value="B"> B. Boîte à moustaches</label>
+                <label><input type="checkbox" name="q13" value="C"> C. Diagramme de dispersion</label>
+                <label><input type="checkbox" name="q13" value="D"> D. Barre empilée</label>
+            </fieldset>
+
+            <!-- Question 14 -->
+            <fieldset>
+                <legend>14. Comment recoder une variable continue en catégories dans SPSS? (Choix unique)</legend>
+                <label><input type="radio" name="q14" value="A"> A. Data > Define Variable Properties...</label>
+                <label><input type="radio" name="q14" value="B"> B. Transform > Recode into Different Variables...</label>
+                <label><input type="radio" name="q14" value="C"> C. Analyze > Recode > Into Different Variables</label>
+                <label><input type="radio" name="q14" value="D"> D. Transform > Visual Binning...</label>
+            </fieldset>
+
+            <!-- Question 15 -->
+            <fieldset>
+                <legend>15. Quelle fonction utiliser pour combiner deux variables qualitatives en une nouvelle variable dans SPSS? (Choix unique)</legend>
+                <label><input type="radio" name="q15" value="A"> A. Compute Variable</label>
+                <label><input type="radio" name="q15" value="B"> B. Recode into Different Variables</label>
+                <label><input type="radio" name="q15" value="C"> C. Merge Variables</label>
+                <label><input type="radio" name="q15" value="D"> D. Concatenate function in Compute</label>
+            </fieldset>
+
+            <!-- Question 16 -->
+            <fieldset>
+                <legend>16. Quel est l'intérêt principal de créer un tableau croisé (crosstabs) dans SPSS? (Choix unique)</legend>
+                <label><input type="radio" name="q16" value="A"> A. Calculer la moyenne de deux variables</label>
+                <label><input type="radio" name="q16" value="B"> B. Comparer les distributions de deux variables qualitatives</label>
+                <label><input type="radio" name="q16" value="C"> C. Établir une corrélation entre deux variables continues</label>
+                <label><input type="radio" name="q16" value="D"> D. Tracer un graphique de dispersion</label>
+            </fieldset>
+
+            <!-- Question 17 -->
+            <fieldset>
+                <legend>17. Pour un exercice basique de corrélation, quelles données devriez-vous vérifier avant d'appliquer Pearson? (Choix multiples)</legend>
+                <label><input type="checkbox" name="q17" value="A"> A. Normalité des distributions</label>
+                <label><input type="checkbox" name="q17" value="B"> B. Homogénéité des variances</label>
+                <label><input type="checkbox" name="q17" value="C"> C. Linéarité de la relation</label>
+                <label><input type="checkbox" name="q17" value="D"> D. Absence de valeurs aberrantes</label>
+            </fieldset>
+
+            <!-- Question 18 -->
+            <fieldset>
+                <legend>18. Quelle procédure dans SPSS permet d'étudier les différences de consommation selon le genre? (Choix unique)</legend>
+                <label><input type="radio" name="q18" value="A"> A. T-test</label>
+                <label><input type="radio" name="q18" value="B"> B. ANOVA</label>
+                <label><input type="radio" name="q18" value="C"> C. Correlation</label>
+                <label><input type="radio" name="q18" value="D"> D. Chi-square test</label>
+            </fieldset>
+
+            <!-- Question 19 -->
+            <fieldset>
+                <legend>19. Comment transformer des données continues en plages ou catégories pour une analyse spécifique dans SPSS? (Choix unique)</legend>
+                <label><input type="radio" name="q19" value="A"> A. Data > Transform > Compute Variable...</label>
+                <label><input type="radio" name="q19" value="B"> B. Transform > Recode > Into Different Variables...</label>
+                <label><input type="radio" name="q19" value="C"> C. Transform > Automatic Recode...</label>
+                <label><input type="radio" name="q19" value="D"> D. Analyze > Descriptive Statistics > Frequencies</label>
+            </fieldset>
+
+            <!-- Question 20 -->
+            <fieldset>
+                <legend>20. Quel est le rôle des courbes ROC dans l'analyse univariable? (Choix unique)</legend>
+                <label><input type="radio" name="q20" value="A"> A. Comparer deux groupes selon une variable continue</label>
+                <label><input type="radio" name="q20" value="B"> B. Évaluer la capacité d'une variable continue à distinguer entre deux conditions ou états</label>
+                <label><input type="radio" name="q20" value="C"> C. Établir la relation linéaire entre deux variables continues</label>
+                <label><input type="radio" name="q20" value="D"> D. Tester l'indépendance de deux variables qualitatives</label>
+            </fieldset>
+
+            <!-- Question 21 -->
+            <fieldset>
+                <legend>21. Dans SPSS, comment peut-on identifier et traiter les valeurs manquantes pour une série de données? (Choix multiples)</legend>
+                <label><input type="checkbox" name="q21" value="A"> A. Transform > Compute Variable...</label>
+                <label><input type="checkbox" name="q21" value="B"> B. Analyze > Missing Value Analysis...</label>
+                <label><input type="checkbox" name="q21" value="C"> C. Data > Replace Missing Values...</label>
+                <label><input type="checkbox" name="q21" value="D"> D. Analyze > Descriptive Statistics > Explore...</label>
+            </fieldset>
+
+            <!-- Question 22 -->
+            <fieldset>
+                <legend>22. Quelle procédure utilise-t-on dans SPSS pour comparer les moyennes de plus de deux groupes? (Choix unique)</legend>
+                <label><input type="radio" name="q22" value="A"> A. T-test</label>
+                <label><input type="radio" name="q22" value="B"> B. ANOVA</label>
+                <label><input type="radio" name="q22" value="C"> C. Correlation</label>
+                <label><input type="radio" name="q22" value="D"> D. Regression</label>
+            </fieldset>
+
+            <!-- Question 23 -->
+            <fieldset>
+                <legend>23. Comment peut-on créer une variable de rang dans SPSS? (Choix unique)</legend>
+                <label><input type="radio" name="q23" value="A"> A. Transform > Rank Cases...</label>
+                <label><input type="radio" name="q23" value="B"> B. Analyze > Descriptive Statistics > Frequencies</label>
+                <label><input type="radio" name="q23" value="C"> C. Data > Define Variable Properties...</label>
+                <label><input type="radio" name="q23" value="D"> D. Transform > Compute Variable...</label>
+            </fieldset>
+
+            <!-- Question 24 -->
+            <fieldset>
+                <legend>24. Quelle est la méthode pour accéder à l'analyse factorielle dans SPSS? (Choix unique)</legend>
+                <label><input type="radio" name="q24" value="A"> A. Analyze > Dimension Reduction > Factor...</label>
+                <label><input type="radio" name="q24" value="B"> B. Analyze > Regression > Linear</label>
+                <label><input type="radio" name="q24" value="C"> C. Analyze > Correlate > Bivariate</label>
+                <label><input type="radio" name="q24" value="D"> D. Data > Scale > Factor Analysis...</label>
+            </fieldset>
+
+            <!-- Question 25 -->
+            <fieldset>
+                <legend>25. Comment peut-on générer des graphiques de boîtes à moustaches pour comparer plusieurs groupes selon une variable continue dans SPSS? (Choix unique)</legend>
+                <label><input type="radio" name="q25" value="A"> A. Graphs > Legacy Dialogs > Boxplot...</label>
+                <label><input type="radio" name="q25" value="B"> B. Analyze > Descriptive Statistics > Explore</label>
+                <label><input type="radio" name="q25" value="C"> C. Analyze > Compare Means > Means</label>
+                <label><input type="radio" name="q25" value="D"> D. Data > Visual Binning...</label>
+            </fieldset>
+
+            <!-- Question 26 -->
+            <fieldset>
+                <legend>26. Quel test utilise-t-on dans SPSS pour vérifier si deux variables qualitatives sont indépendantes? (Choix unique)</legend>
+                <label><input type="radio" name="q26" value="A"> A. T-test</label>
+                <label><input type="radio" name="q26" value="B"> B. ANOVA</label>
+                <label><input type="radio" name="q26" value="C"> C. Chi-square test</label>
+                <label><input type="radio" name="q26" value="D"> D. Correlation</label>
+            </fieldset>
+
+            <!-- Question 28 -->
+            <fieldset>
+                <legend>28. Quelle fonction permet de sauvegarder les résultats d'une régression multiple dans SPSS? (Choix multiples)</legend>
+                <label><input type="checkbox" name="q28" value="A"> A. Save Unstandardized Predicted Values</label>
+                <label><input type="checkbox" name="q28" value="B"> B. Save Standardized Residuals</label>
+                <label><input type="checkbox" name="q28" value="C"> C. Save Cook's Distance</label>
+                <label><input type="checkbox" name="q28" value="D"> D. Save Leverage Values</label>
+            </fieldset>
+
+            <!-- Question 29 -->
+            <fieldset>
+                <legend>29. Comment peut-on accéder à une analyse de la covariance (ANCOVA) dans SPSS? (Choix unique)</legend>
+                <label><input type="radio" name="q29" value="A"> A. Analyze > General Linear Model > Univariate...</label>
+                <label><input type="radio" name="q29" value="B"> B. Analyze > Compare Means > ANOVA</label>
+                <label><input type="radio" name="q29" value="C"> C. Analyze > Regression > Linear</label>
+                <label><input type="radio" name="q29" value="D"> D. Graphs > Chart Builder...</label>
+            </fieldset>
+
+            <!-- Question 30 -->
+            <fieldset>
+                <legend>30. Quelle est la méthode pour effectuer une régression logistique dans SPSS? (Choix unique)</legend>
+                <label><input type="radio" name="q30" value="A"> A. Analyze > Regression > Binary Logistic...</label>
+                <label><input type="radio" name="q30" value="B"> B. Analyze > Regression > Linear</label>
+                <label><input type="radio" name="q30" value="C"> C. Data > Scale > Logistic Regression</label>
+                <label><input type="radio" name="q30" value="D"> D. Analyze > Descriptive Statistics > Crosstabs</label>
+            </fieldset>
+
+            <!-- Question 31 -->
+            <fieldset>
+                <legend>31. Comment peut-on tester l'homogénéité des variances pour différentes groupes dans SPSS? (Choix unique)</legend>
+                <label><input type="radio" name="q31" value="A"> A. Analyze > Descriptive Statistics > Explore</label>
+                <label><input type="radio" name="q31" value="B"> B. Analyze > Compare Means > One-Way ANOVA</label>
+                <label><input type="radio" name="q31" value="C"> C. Analyze > Scale > Reliability Analysis</label>
+                <label><input type="radio" name="q31" value="D"> D. Transform > Compute Variable...</label>
+            </fieldset>
+
+            <!-- Question 32 -->
+            <fieldset>
+                <legend>32. Quelle option permet de créer un fichier de syntaxe dans SPSS? (Choix unique)</legend>
+                <label><input type="radio" name="q32" value="A"> A. File > New > Syntax</label>
+                <label><input type="radio" name="q32" value="B"> B. Edit > Options > Syntax</label>
+                <label><input type="radio" name="q32" value="C"> C. Data > New File > Syntax</label>
+                <label><input type="radio" name="q32" value="D"> D. Analyze > Scripts > Syntax</label>
+            </fieldset>
+
+            <!-- Question 33 -->
+            <fieldset>
+                <legend>33. Dans SPSS, comment peut-on visualiser la distribution d'une variable continue? (Choix multiples)</legend>
+                <label><input type="checkbox" name="q33" value="A"> A. Histogram</label>
+                <label><input type="checkbox" name="q33" value="B"> B. Frequency Polygon</label>
+                <label><input type="checkbox" name="q33" value="C"> C. Boxplot</label>
+                <label><input type="checkbox" name="q33" value="D"> D. Q-Q Plot</label>
+            </fieldset>
+
+            <!-- Question 34 -->
+            <fieldset>
+                <legend>34. Quelle fonction SPSS permet de comparer les distributions de deux échantillons indépendants? (Choix unique)</legend>
+                <label><input type="radio" name="q34" value="A"> A. Independent-samples T-test</label>
+                <label><input type="radio" name="q34" value="B"> B. Paired-samples T-test</label>
+                <label><input type="radio" name="q34" value="C"> C. One-sample T-test</label>
+                <label><input type="radio" name="q34" value="D"> D. ANOVA</label>
+            </fieldset>
+
+            <!-- Question 35 -->
+            <fieldset>
+                <legend>35. Comment titre-t-on un graphique dans SPSS? (Choix unique)</legend>
+                <label><input type="radio" name="q35" value="A"> A. Double-click the graph > Chart Editor > Titles...</label>
+                <label><input type="radio" name="q35" value="B"> B. Graphs > Chart Builder > Title/footnote...</label>
+                <label><input type="radio" name="q35" value="C"> C. Edit > Graphs > Titles</label>
+                <label><input type="radio" name="q35" value="D"> D. Tools > Options > Output Labels...</label>
+            </fieldset>
+
+            <!-- Question 36 -->
+            <fieldset>
+                <legend>36. Quel menu utilise-t-on pour normaliser des données dans SPSS? (Choix unique)</legend>
+                <label><input type="radio" name="q36" value="A"> A. Analyze > Descriptive Statistics > Descriptives</label>
+                <label><input type="radio" name="q36" value="B"> B. Data > Normalize Data...</label>
+                <label><input type="radio" name="q36" value="C"> C. Transform > Normalize...</label>
+                <label><input type="radio" name="q36" value="D"> D. Transform > Compute Variable...</label>
+            </fieldset>
+
+            <!-- Question 37 -->
+            <fieldset>
+                <legend>37. Pour une analyse de survie, quelle fonction SPSS est la plus appropriée? (Choix unique)</legend>
+                <label><input type="radio" name="q37" value="A"> A. Analyze > Survival > Kaplan-Meier...</label>
+                <label><input type="radio" name="q37" value="B"> B. Analyze > Regression > Cox Regression</label>
+                <label><input type="radio" name="q37" value="C"> C. Data > Scale > Survival</label>
+                <label><input type="radio" name="q37" value="D"> D. Transform > Compute Variable...</label>
+            </fieldset>
+
+            <!-- Question 38 -->
+            <fieldset>
+                <legend>38. Comment peut-on ajouter des valeurs étiquetées à des variables qualitatives dans SPSS? (Choix unique)</legend>
+                <label><input type="radio" name="q38" value="A"> A. Variable View > Click 'Values' column for the variable</label>
+                <label><input type="radio" name="q38" value="B"> B. Data > Define Variable Properties...</label>
+                <label><input type="radio" name="q38" value="C"> C. Analyze > Descriptive Statistics > Frequencies</label>
+                <label><input type="radio" name="q38" value="D"> D. Transform > Recode into Same Variables...</label>
+            </fieldset>
+
+            <!-- Question 40 -->
+            <fieldset>
+                <legend>40. Comment peut-on effectuer une régression polynomiale dans SPSS? (Choix unique)</legend>
+                <label><input type="radio" name="q40" value="A"> A. Analyze > Regression > Curve Estimation...</label>
+                <label><input type="radio" name="q40" value="B"> B. Analyze > Regression > Linear</label>
+                <label><input type="radio" name="q40" value="C"> C. Transform > Compute Variable...</label>
+                <label><input type="radio" name="q40" value="D"> D. Graphs > Legacy Dialogs > Scatter/Dot...</label>
+            </fieldset>
+
+            <!-- Question 41 -->
+            <fieldset>
+                <legend>41. Dans SPSS, comment peut-on utiliser la procédure 'Split File' pour analyser des sous-groupes? (Choix unique)</legend>
+                <label><input type="radio" name="q41" value="A"> A. Data > Split File...</label>
+                <label><input type="radio" name="q41" value="B"> B. Analyze > Compare Means > Means</label>
+                <label><input type="radio" name="q41" value="C"> C. Transform > Compute Variable...</label>
+                <label><input type="radio" name="q41" value="D"> D. Data > Define Variable Properties...</label>
+            </fieldset>
+
+            <!-- Question 42 -->
+            <fieldset>
+                <legend>42. Quelle méthode permet d'analyser des séries temporelles dans SPSS? (Choix unique)</legend>
+                <label><input type="radio" name="q42" value="A"> A. Analyze > Forecasting > Create Models...</label>
+                <label><input type="radio" name="q42" value="B"> B. Analyze > Regression > Linear</label>
+                <label><input type="radio" name="q42" value="C"> C. Data > Time Series > Modeler</label>
+                <label><input type="radio" name="q42" value="D"> D. Transform > Compute Variable...</label>
+            </fieldset>
+
+            <!-- Question 43 -->
+            <fieldset>
+                <legend>43. Comment peut-on accéder aux analyses multivariées dans SPSS? (Choix unique)</legend>
+                <label><input type="radio" name="q43" value="A"> A. Analyze > General Linear Model > Multivariate...</label>
+                <label><input type="radio" name="q43" value="B"> B. Analyze > Regression > Linear</label>
+                <label><input type="radio" name="q43" value="C"> C. Data > Define Variable Properties...</label>
+                <label><input type="radio" name="q43" value="D"> D. Transform > Compute Variable...</label>
+            </fieldset>
+
+            <!-- Question 44 -->
+            <fieldset>
+                <legend>44. Quelle option dans SPSS permet de calculer le coefficient de variation pour une variable? (Choix unique)</legend>
+                <label><input type="radio" name="q44" value="A"> A. Analyze > Descriptive Statistics > Frequencies</label>
+                <label><input type="radio" name="q44" value="B"> B. Analyze > Descriptive Statistics > Descriptives</label>
+                <label><input type="radio" name="q44" value="C"> C. Transform > Compute Variable...</label>
+                <label><input type="radio" name="q44" value="D"> D. Data > Aggregate...</label>
+            </fieldset>
+
+            <!-- Question 45 -->
+            <fieldset>
+                <legend>45. Comment titre-t-on les axes d'un graphique dans SPSS? (Choix unique)</legend>
+                <label><input type="radio" name="q45" value="A"> A. Double-click the graph > Chart Editor > Axis...</label>
+                <label><input type="radio" name="q45" value="B"> B. Graphs > Chart Builder > Titles/footnote...</label>
+                <label><input type="radio" name="q45" value="C"> C. Edit > Graphs > Axis Titles</label>
+                <label><input type="radio" name="q45" value="D"> D. Tools > Options > Output Labels...</label>
+            </fieldset>
+
+            <!-- Question 46 -->
+            <fieldset>
+                <legend>46. Quelle fonction SPSS permet de faire une analyse discriminante? (Choix unique)</legend>
+                <label><input type="radio" name="q46" value="A"> A. Analyze > Classify > Discriminant Analysis...</label>
+                <label><input type="radio" name="q46" value="B"> B. Analyze > Regression > Linear</label>
+                <label><input type="radio" name="q46" value="C"> C. Transform > Compute Variable...</label>
+                <label><input type="radio" name="q46" value="D"> D. Data > Define Variable Properties...</label>
+            </fieldset>
+
+            <!-- Question 49 -->
+            <fieldset>
+                <legend>49. Quelle option permet d'importer des données Excel dans SPSS? (Choix unique)</legend>
+                <label><input type="radio" name="q49" value="A"> A. File > Open > Data...</label>
+                <label><input type="radio" name="q49" value="B"> B. File > Import Data > Excel...</label>
+                <label><input type="radio" name="q49" value="C"> C. File > Export > Excel...</label>
+                <label><input type="radio" name="q49" value="D"> D. Data > Read Excel...</label>
+            </fieldset>
+
+            <!-- Question 50 -->
+            <fieldset>
+                <legend>50. Dans la fenêtre 'Variable View', que spécifie l'attribut 'Measure'? (Choix unique)</legend>
+                <label><input type="radio" name="q50" value="A"> A. Le type de variable (nominal, ordinal, scale)</label>
+                <label><input type="radio" name="q50" value="B"> B. Le nom de la variable</label>
+                <label><input type="radio" name="q50" value="C"> C. Les étiquettes de valeur</label>
+                <label><input type="radio" name="q50" value="D"> D. Les valeurs manquantes</label>
+            </fieldset>
+
+            <!-- Question 51 -->
+            <fieldset>
+                <legend>51. Comment peut-on modifier l'ordre des variables dans le fichier de données SPSS? (Choix unique)</legend>
+                <label><input type="radio" name="q51" value="A"> A. Data > Sort Variables...</label>
+                <label><input type="radio" name="q51" value="B"> B. Edit > Move Variable...</label>
+                <label><input type="radio" name="q51" value="C"> C. Data > Select Cases...</label>
+                <label><input type="radio" name="q51" value="D"> D. Transform > Rearrange Variables...</label>
+            </fieldset>
+
+            <!-- Question 52 -->
+            <fieldset>
+                <legend>52. Quelle est la première étape pour réaliser une analyse univariée dans SPSS? (Choix unique)</legend>
+                <label><input type="radio" name="q52" value="A"> A. Sélectionner la variable d'intérêt</label>
+                <label><input type="radio" name="q52" value="B"> B. Choisir le type de graphique</label>
+                <label><input type="radio" name="q52" value="C"> C. Identifier les valeurs manquantes</label>
+                <label><input type="radio" name="q52" value="D"> D. Définir les classes pour les variables qualitatives</label>
+            </fieldset>
+
+            <!-- Question 53 -->
+            <fieldset>
+                <legend>53. Où peut-on ajuster les options de visualisation des tables et des graphiques dans SPSS? (Choix unique)</legend>
+                <label><input type="radio" name="q53" value="A"> A. Edit > Options...</label>
+                <label><input type="radio" name="q53" value="B"> B. View > Tables</label>
+                <label><input type="radio" name="q53" value="C"> C. File > Preferences</label>
+                <label><input type="radio" name="q53" value="D"> D. Analyze > Output Settings</label>
+            </fieldset>
+
+            <!-- Question 54 -->
+            <fieldset>
+                <legend>54. Comment peut-on créer un fichier de sauvegarde de toutes les données et analyses réalisées dans SPSS? (Choix unique)</legend>
+                <label><input type="radio" name="q54" value="A"> A. File > Save</label>
+                <label><input type="radio" name="q54" value="B"> B. File > Save As...</label>
+                <label><input type="radio" name="q54" value="C"> C. File > Save All</label>
+                <label><input type="radio" name="q54" value="D"> D. File > Backup</label>
+            </fieldset>
+
+            <!-- Question 55 -->
+            <fieldset>
+                <legend>55. Dans SPSS, quel menu permet d'accéder aux tests non paramétriques pour deux échantillons indépendants? (Choix unique)</legend>
+                <label><input type="radio" name="q55" value="A"> A. Analyze > Nonparametric Tests > Independent Samples</label>
+                <label><input type="radio" name="q55" value="B"> B. Analyze > Compare Means > Independent Samples T-Test</label>
+                <label><input type="radio" name="q55" value="C"> C. Analyze > Correlate > Bivariate</label>
+                <label><input type="radio" name="q55" value="D"> D. Data > Nonparametric Tests</label>
+            </fieldset>
+
+            <!-- Question 56 -->
+            <fieldset>
+                <legend>56. Comment peut-on diviser un fichier de données SPSS en plusieurs sous-groupes pour l'analyse? (Choix unique)</legend>
+                <label><input type="radio" name="q56" value="A"> A. Data > Split File...</label>
+                <label><input type="radio" name="q56" value="B"> B. Data > Select Cases...</label>
+                <label><input type="radio" name="q56" value="C"> C. Transform > Compute Variable...</label>
+                <label><input type="radio" name="q56" value="D"> D. Analyze > Reports > Split File...</label>
+            </fieldset>
+
+            <!-- Question 57 -->
+            <fieldset>
+                <legend>57. Quel menu utilise-t-on pour examiner la structure de corrélation entre plusieurs variables continues? (Choix unique)</legend>
+                <label><input type="radio" name="q57" value="A"> A. Analyze > Correlate > Bivariate</label>
+                <label><input type="radio" name="q57" value="B"> B. Analyze > Correlate > Partial</label>
+                <label><input type="radio" name="q57" value="C"> C. Analyze > Correlate > Distances</label>
+                <label><input type="radio" name="q57" value="D"> D. Analyze > Scale > Reliability Analysis</label>
+            </fieldset>
+
+            <!-- Question 58 -->
+            <fieldset>
+                <legend>58. Dans SPSS, comment peut-on rapidement visualiser les statistiques descriptives pour plusieurs variables? (Choix unique)</legend>
+                <label><input type="radio" name="q58" value="A"> A. Analyze > Descriptive Statistics > Descriptives</label>
+                <label><input type="radio" name="q58" value="B"> B. Analyze > Descriptive Statistics > Frequencies</label>
+                <label><input type="radio" name="q58" value="C"> C. Data > Report > Case Summaries</label>
+                <label><input type="radio" name="q58" value="D"> D. Analyze > Reports > Case Summaries</label>
+            </fieldset>
+
+            <!-- Question 59 -->
+            <fieldset>
+                <legend>59. Quelle fonctionnalité de SPSS permet de générer des graphiques de séries temporelles? (Choix unique)</legend>
+                <label><input type="radio" name="q59" value="A"> A. Graphs > Legacy Dialogs > Time Series Plot</label>
+                <label><input type="radio" name="q59" value="B"> B. Analyze > Forecasting > Time Series Modeler</label>
+                <label><input type="radio" name="q59" value="C"> C. Data > Define Variable Properties...</label>
+                <label><input type="radio" name="q59" value="D"> D. Transform > Date and Time Wizard...</label>
+            </fieldset>
+
+            <!-- Question 60 -->
+            <fieldset>
+                <legend>60. Comment labelise-t-on les axes dans un graphique créé par SPSS? (Choix unique)</legend>
+                <label><input type="radio" name="q60" value="A"> A. Double-cliquez sur le graphique et utilisez l'éditeur de graphique</label>
+                <label><input type="radio" name="q60" value="B"> B. Graphs > Chart Builder...</label>
+                <label><input type="radio" name="q60" value="C"> C. Edit > Options > Chart Options</label>
+                <label><input type="radio" name="q60" value="D"> D. Analyze > Graphs > Edit Axis Labels...</label>
+            </fieldset>
+
+            <!-- Question 61 -->
+            <fieldset>
+                <legend>61. Dans quel menu SPSS trouve-t-on l'option pour effectuer une Analyse de Cluster? (Choix unique)</legend>
+                <label><input type="radio" name="q61" value="A"> A. Analyze > Classification > Cluster...</label>
+                <label><input type="radio" name="q61" value="B"> B. Data > Cluster...</label>
+                <label><input type="radio" name="q61" value="C"> C. Analyze > Dimension Reduction > Cluster...</label>
+                <label><input type="radio" name="q61" value="D"> D. Transform > Cluster...</label>
+            </fieldset>
+
+            <!-- Question 62 -->
+            <fieldset>
+                <legend>62. Comment peut-on identifier la présence d'influenceurs ou de points de levier dans une régression dans SPSS? (Choix multiples)</legend>
+                <label><input type="checkbox" name="q62" value="A"> A. Analyze > Regression > Linear > Plots...</label>
+                <label><input type="checkbox" name="q62" value="B"> B. Analyze > Regression > Linear > Save...</label>
+                <label><input type="checkbox" name="q62" value="C"> C. Graphs > Legacy Dialogs > Scatter/Dot...</label>
+                <label><input type="checkbox" name="q62" value="D"> D. Analyze > Diagnostic Plots...</label>
+            </fieldset>
+
+            <!-- Question 63 -->
+            <fieldset>
+                <legend>63. Dans SPSS, quel outil permet d'effectuer une analyse de correspondance? (Choix unique)</legend>
+                <label><input type="radio" name="q63" value="A"> A. Analyze > Data Reduction > Factor Analysis...</label>
+                <label><input type="radio" name="q63" value="B"> B. Analyze > Classification > Discriminant...</label>
+                <label><input type="radio" name="q63" value="C"> C. Analyze > Correlate > Bivariate</label>
+                <label><input type="radio" name="q63" value="D"> D. Analyze > Dimension Reduction > Correspondence...</label</fieldset>
+
+            <!-- Question 64 -->
+            <fieldset>
+                <legend>64. Comment peut-on ajuster les couleurs et la taille du texte dans un graphique SPSS? (Choix unique)</legend>
+                <label><input type="radio" name="q64" value="A"> A. Double-cliquez sur le graphique et choisissez "Properties"</label>
+                <label><input type="radio" name="q64" value="B"> B. Graphs > Edit Chart...</label>
+                <label><input type="radio" name="q64" value="C"> C. Edit > Options > General...</label>
+                <label><input type="radio" name="q64" value="D"> D. Format > Graph Format...</label>
+            </fieldset>
+
+            <!-- Question 66 -->
+            <fieldset>
+                <legend>66. Dans SPSS, comment génère-t-on un rapport de synthèse pour des variables qualitatives et continues? (Choix unique)</legend>
+                <label><input type="radio" name="q66" value="A"> A. Analyze > Reports > Report Summaries in Columns</label>
+                <label><input type="radio" name="q66" value="B"> B. Analyze > Descriptive Statistics > Frequencies</label>
+                <label><input type="radio" name="q66" value="C"> C. Data > Reports > Case Summaries</label>
+                <label><input type="radio" name="q66" value="D"> D. Analyze > Reports > Case Summaries</label>
+            </fieldset>
+
+            <!-- Question 67 -->
+            <fieldset>
+                <legend>67. Quelle option permet d'analyser l'évolution des ventes sur plusieurs années à l'aide de SPSS? (Choix unique)</legend>
+                <label><input type="radio" name="q67" value="A"> A. Graphs > Legacy Dialogs > Line...</label>
+                <label><input type="radio" name="q67" value="B"> B. Analyze > Forecasting > Create Models...</label>
+                <label><input type="radio" name="q67" value="C"> C. Data > Time Series > Modeler...</label>
+                <label><input type="radio" name="q67" value="D"> D. Analyze > Regression > Curve Estimation...</label>
+            </fieldset>
+
+            <!-- Question 68 -->
+            <fieldset>
+                <legend>68. Comment peut-on procéder pour effectuer un test d'indépendance dans SPSS? (Choix unique)</legend>
+                <label><input type="radio" name="q68" value="A"> A. Analyze > Descriptive Statistics > Crosstabs...</label>
+                <label><input type="radio" name="q68" value="B"> B. Analyze > Nonparametric Tests > Chi-Square</label>
+                <label><input type="radio" name="q68" value="C"> C. Data > Validate Data...</label>
+                <label><input type="radio" name="q68" value="D"> D. Analyze > Correlate > Bivariate</label>
+            </fieldset>
+
+            <!-- Submit Button -->
+            <button type="button" onclick="submitAnswers()">Soumettre</button>
+        </form>
+
+        <!-- Results -->
+        <div id="result"></div>
+
+        <script>
+            function submitAnswers() {
+                const correctAnswers = {
+                    q1: 'C', q2: ['A', 'B', 'D'], q3: 'D', q4: 'B',
+                    q5: ['C'], q6: 'B', q7: 'A', q8: 'A', q9: 'B',
+                    q10: 'A', q11: 'D', q12: 'A', q13: ['B', 'C'],
+                    q14: 'D', q15: 'B', q16: 'B', q17: ['A', 'C', 'D'],
+                    q18: 'A', q19: 'B', q20: 'B', q21: ['B', 'D'],
+                    q22: 'B', q23: 'A', q24: 'A', q25: 'A',
+                    q26: 'C', q28: ['A', 'B', 'C', 'D'], q29: 'A',
+                    q30: 'A', q31: 'A', q32: 'A', q33: ['A', 'C', 'D'],
+                    q34: 'A', q35: 'A', q36: 'C', q37: 'A',
+                    q38: 'A', q40: 'A', q41: 'A', q42: 'A',
+                    q43: 'A', q44: 'B', q45: 'A', q46: 'A',
+                    q49: 'B', q50: 'A', q51: 'A', q52: 'A',
+                    q53: 'A', q54: 'B', q55: 'A', q56: 'A',
+                    q57: 'A', q58: 'A', q59: 'B', q60: 'A',
+                    q61: 'A', q62: ['A', 'B'], q63: 'D', q64: 'B',
+                    q66: 'A', q67: 'B', q68: 'A'
+                };
+                let score = 0;
+                let total = 68;
+                let incorrectCount = 0;
+
+                // Iterate over each question
+                for (let q in correctAnswers) {
+                    const correct = correctAnswers[q];
+                    let answered = document.querySelectorAll(`input[name="${q}"]:checked`);
+                    let userAnswers = Array.from(answered).map(x => x.value);
+
+                    // Special handling for multiple choice questions
+                    if (Array.isArray(correct)) {
+                        if (userAnswers.length === correct.length && userAnswers.every(value => correct.includes(value))) {
+                            score++;
+                        } else {
+                            incorrectCount++;
+                        }
+                    } else {
+                        if (userAnswers.length === 1 && userAnswers[0] === correct) {
+                            score++;
+                        } else {
+                            incorrectCount++;
+                        }
+                    }
+                }
+
+                // Display results
+                document.getElementById('result').innerHTML = `
+                    <h2>Résultats</h2>
+                    <p>Nombre de réponses correctes: ${score} sur ${total}</p>
+                    <p>Nombre de réponses incorrectes: ${incorrectCount}</p>
+                `;
+            }
+        </script>
+    </div>
+</body>
+</html> 
